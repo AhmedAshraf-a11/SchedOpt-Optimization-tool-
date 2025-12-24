@@ -1,0 +1,160 @@
+/* Schedule View Styles */
+
+.header-actions {
+    float: right;
+    margin-top: -50px;
+    /* Quick align with h1 */
+    display: flex;
+    gap: var(--spacing-sm);
+}
+
+.table-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--spacing-md);
+    padding-bottom: var(--spacing-md);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.search-box input {
+    min-width: 250px;
+}
+
+.schedule-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.schedule-table th,
+.schedule-table td {
+    padding: var(--spacing-md);
+    text-align: left;
+    border-bottom: 1px solid var(--border-color);
+    /* Prevent text overflow */
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+.schedule-table th {
+    font-weight: 600;
+    color: var(--text-muted);
+    font-size: var(--font-size-sm);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.schedule-table tbody tr:hover {
+    background-color: var(--primary-light);
+}
+
+.resource-badge {
+    font-weight: 500;
+}
+
+.badge {
+    padding: 0.25rem 0.5rem;
+    border-radius: 999px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.badge-success {
+    background-color: #dcfce7;
+    color: #166534;
+}
+
+.dark-theme .badge-success {
+    background-color: #166534;
+    color: #dcfce7;
+}
+
+.badge-warning {
+    background-color: #fef3c7;
+    color: #92400e;
+}
+
+.dark-theme .badge-warning {
+    background-color: #92400e;
+    color: #fef3c7;
+}
+
+.btn-icon-sm {
+    padding: 4px;
+    font-size: 1rem;
+    color: var(--secondary-color);
+    margin-right: 4px;
+}
+
+.btn-icon-sm.danger:hover {
+    color: var(--danger-color);
+}
+
+.table-footer {
+    margin-top: var(--spacing-md);
+    font-size: var(--font-size-sm);
+}
+
+@media (max-width: 900px) {
+    .header-actions {
+        float: none;
+        margin-top: var(--spacing-sm);
+        margin-bottom: var(--spacing-md);
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+
+    .header-actions .btn {
+        min-height: 44px; /* Touch-friendly */
+        -webkit-tap-highlight-color: transparent;
+    }
+
+    .table-controls {
+        flex-direction: column;
+        align-items: stretch;
+        gap: var(--spacing-sm);
+    }
+
+    .search-box {
+        width: 100%;
+    }
+
+    .search-box input {
+        min-width: 0;
+        width: 100%;
+        min-height: 44px; /* Touch-friendly */
+        font-size: 16px; /* Prevent zoom on iOS */
+    }
+
+    /* Better table display on mobile */
+    .table-responsive {
+        -webkit-overflow-scrolling: touch;
+        /* Add visual indicator for scrollable table */
+        border: 1px solid var(--border-color);
+        border-radius: 0.5rem;
+    }
+
+    .schedule-table {
+        font-size: 0.875rem; /* Slightly smaller on mobile */
+    }
+
+    .schedule-table th,
+    .schedule-table td {
+        padding: var(--spacing-sm) var(--spacing-xs);
+        min-width: 80px; /* Prevent too narrow columns */
+    }
+
+    .schedule-table th {
+        font-size: 0.75rem;
+        white-space: nowrap;
+    }
+
+    .btn-icon-sm {
+        min-width: 44px;
+        min-height: 44px;
+        padding: var(--spacing-sm);
+        -webkit-tap-highlight-color: transparent;
+    }
+}
